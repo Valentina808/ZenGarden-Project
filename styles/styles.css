@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Turret+Road:wght@500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Lato", sans-serif;
+}
+
+h2, h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px;
+}
+
+.page-wrapper {
+  padding-top: 5rem;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.9)), url(../images/background.jpg);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  display: grid;
+  grid-gap: 1.2rem;
+  grid-template-columns: repeat(8, auto);
+  grid-template-rows: auto 1fr 1fr 1fr 4.5rem;
+}
+.page-wrapper .intro {
+  grid-column: 1/9;
+  background-color: #134347;
+  color: #c1eeff;
+  padding: 2rem;
+  gap: 1rem;
+  z-index: 1;
+}
+.page-wrapper .intro h1 {
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: -45px;
+  position: absolute;
+  text-transform: uppercase;
+  color: #134347;
+  left: 40%;
+  top: 10%;
+  z-index: 1;
+}
+.page-wrapper .intro .summary a {
+  color: #c1eeff;
+}
+.page-wrapper .sidebar {
+  grid-column: 1/4;
+  grid-row: 2/5;
+  padding: 2rem;
+}
+.page-wrapper .sidebar li {
+  padding: 0.8rem;
+  list-style: none;
+}
+.page-wrapper .sidebar li a {
+  text-decoration: none;
+  color: #051112;
+}
+.page-wrapper .main {
+  grid-column: 4/8;
+  grid-row: 2/5;
+}
+.page-wrapper .main .requirements p[role=contentinfo] {
+  background-color: #134347;
+  color: #c1eeff;
+  position: absolute;
+  left: 0%;
+  width: 100%;
+  padding: 4rem;
+  text-align: right;
+  margin-top: 1rem;
+}
+.page-wrapper .main .requirements p[role=contentinfo] a {
+  color: #c1eeff;
+  text-decoration: none;
+}
+.page-wrapper .main footer {
+  position: absolute;
+  left: 10%;
+  padding: 1rem;
+  top: 223%;
+}
+.page-wrapper .main footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/*# sourceMappingURL=styles.css.map */
