@@ -26,9 +26,12 @@ h2,h3 {
     letter-spacing: 1px;
     padding: 10px;
 }
-  
+
+
+
 //Main content and styles
 .page-wrapper {
+    width: 100%;  // rgba( )
     padding-top: 5rem;
     background-image: linear-gradient( rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.9)), url(../images/background.jpg);
     background-position: center; /* Center the image */
@@ -37,7 +40,7 @@ h2,h3 {
     display: grid;
     grid-gap: 1.2rem;
     grid-template-columns: repeat(8, auto);
-    grid-template-rows: auto 1fr 1fr 1fr 4.5rem;
+    grid-template-rows: auto 1fr 1fr 1fr;
 
     
   
@@ -64,6 +67,7 @@ h2,h3 {
             top: 10%;
             z-index: 1;
         }
+
 
         .summary{
 
@@ -103,9 +107,10 @@ h2,h3 {
             position: absolute;
             left: 0%;
             width: 100%;
-            padding: 4rem;
+            padding: 1.5rem;
             text-align: right;
             margin-top: 1rem;
+            height: 5rem;
             a {
                 color: $font-color2;
                 text-decoration: none;
@@ -113,13 +118,15 @@ h2,h3 {
          
         }
        
-   }
+   } 
 
     footer {
         position: absolute;
         left: 10%;  
-        padding: 1rem;
-        top: 223%;
+        padding: 10px;
+        margin-top: 2.5rem;
+        
+       
 
         a{
             text-decoration: none;
@@ -129,3 +136,43 @@ h2,h3 {
    }
     
 }
+
+@media (max-width: 460px) {
+    .page-wrapper {
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+      .intro {
+       grid-column: 1/2;
+       .banner{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    h1 {
+        left: 28%;
+       }
+    }
+     }
+
+     .main {
+        grid-column: 1/2;
+        padding: 1rem;
+     }
+
+     .sidebar {
+        display: none;
+     }
+    }
+
+    .main {
+        
+            footer {
+                display: none;
+            }
+        
+    }  
+    
+    
+
+  }
